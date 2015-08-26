@@ -11,7 +11,7 @@ We are going to write four different function programs.  There are four differen
 Given the length and width (in feet) of a square parcel of land, convert that parcel of land from square feet to acres.
 
 ```html
-<p style='color:red'>acre = 43560.174 square feet</p>
+1 acre = 43560.174 square feet
 ```
 
 ####Each of our programs will have the same logic:
