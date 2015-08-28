@@ -2,15 +2,16 @@
 
 I have given you a program named FuncCallingFunc.cpp.
 
-This program has main() and eight functions
-1.  float areaCircle(float radiusIn);
-2.  float circumCircle(float radiusIn);
-3.  float areaSphere(float radiusIn);
-4.  float circumSphere(float radiusIn);
-5.  float volumeSphere(float radiusIn);
-6.  float areaCylinder(float radiusIn, float heightIn);
-7.  float volumeCylinder(float radiusIn, float heightIn);
-8.  float volumeCone(float radiusIn, float heightIn);
+This program has main() and eight functions:
+
+1. float areaCircle(float radiusIn);
+2. float circumCircle(float radiusIn);
+3. float areaSphere(float radiusIn);
+4. float circumSphere(float radiusIn);
+5. float volumeSphere(float radiusIn);
+6. float areaCylinder(float radiusIn, float heightIn);
+7. float volumeCylinder(float radiusIn, float heightIn);
+8. float volumeCone(float radiusIn, float heightIn);
 
 
 The challenge of this assignment is to reduce some redundant code by allowing functions to call other functions.
@@ -26,6 +27,6 @@ The challenge of this assignment is to reduce some redundant code by allowing fu
 
 By calling the function ```areaCircle(float)``` and ```circumCircle(float)``` the above equation can be shortened to:
 
-    - area = 2 * areaCircle(radius) + height * circumCircle( radius)
+    - area = 2 * areaCircle(radius) + height * circumCircle(radius)
 
 You just have to change the code in some functions to call other functions.
