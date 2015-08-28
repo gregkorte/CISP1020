@@ -17,16 +17,16 @@ This program has main() and eight functions:
 The challenge of this assignment is to reduce some redundant code by allowing functions to call other functions.
 
 ######Example:
-1. The function ```areaCircle(float)``` calculates the area of a given circle using the equation:
+1. The function `areaCircle(float)` calculates the area of a given circle using the equation:
 
     - area = PI * radius * radius
 
-2. The function ```areaCylinder(float, float)``` calculates the surface area of a given cylinder using the equation:
+2. The function `areaCylinder(float, float)` calculates the surface area of a given cylinder using the equation:
 
     - area = 2 * PI * radius * radius + height * PI * radius * 2
 
-By calling the function ```areaCircle(float)``` and ```circumCircle(float)``` the above equation can be shortened to:
+By calling the function `areaCircle(float)` and `circumCircle(float)` the above equation can be shortened to:
 
-    - area = 2 * areaCircle(radius) + height * circumCircle(radius)
+- area = 2 * areaCircle(radius) + height * circumCircle(radius)
 
 You just have to change the code in some functions to call other functions.
