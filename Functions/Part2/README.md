@@ -4,14 +4,14 @@ We are going to write a function that receives parameters and returns no value.
 
 The function header will be:
 
-```html
+```
 void hasArgsNoRet(float length, float width)
 ```
 
 ####Our problem:
 Given the length and width (in feet) of a square parcel of land, convert that parcel of land from square feet to acres.
 
-```html
+```
 1 acre = 43560.174 square feet
 ```
 
@@ -33,8 +33,8 @@ int main()
     // get the length
     // get the width
     hasArgsNoRet (length, width);
-system(“pause”);
-        return 0;
+    system(“pause”);
+    return 0;
 }
 void noArgsNoret(float length, float width)
 {
@@ -44,7 +44,7 @@ void noArgsNoret(float length, float width)
 
 Your output should look like the following:
 
-```html
+```
 A parcel of land with the dimensions of
     length      ??????.?????
     width       ????.???

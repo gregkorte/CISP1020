@@ -4,14 +4,14 @@ We are going to write a function that has parameters and returns a value.
 
 The function header will be:
 ```
-    float hasArgsHasRet(float length, float width)
+float hasArgsHasRet(float length, float width)
 ```
 
 ####Our problem:
 Given the length and width (in feet) of a square parcel of land, convert that parcel of land from square feet to acres.
 
 ```
-    1 acre = 43560.174 square feet
+1 acre = 43560.174 square feet
 ```
 
 ######In main()
@@ -29,12 +29,11 @@ Given the length and width (in feet) of a square parcel of land, convert that pa
 
 ```c++
 int main()
-{   // get the length and width
-
+{
+    // get the length and width
     hasArgsHasRet (float length, float width);
 
     // Print all output (see output format on the next page)
-
     system(“pause”);
     return 0;
 }

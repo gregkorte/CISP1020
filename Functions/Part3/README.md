@@ -31,13 +31,11 @@ Given the length and width (in feet) of a square parcel of land, convert that pa
 int main()
 {
     // call function
-
-        noArgsHasRet ();
+    noArgsHasRet();
 
     // print out the number of acres
-
-        system(“pause”);
-        return 0;
+    system(“pause”);
+    return 0;
 }
 float noArgsHasRet()
 {

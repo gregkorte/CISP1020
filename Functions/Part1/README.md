@@ -4,7 +4,7 @@ We are going to write a function that does not receive any parameters and return
 
 The function header will be:
 ```
-    void noArgsNoRet()
+void noArgsNoRet()
 ```
 
 ##Our problem:
@@ -38,7 +38,7 @@ void noArgsNoret()
 
 ######Your output should look like the following:
 
-```html
+```
 A parcel of land with the dimensions of
     length      ??????.?????
     width       ????.???
