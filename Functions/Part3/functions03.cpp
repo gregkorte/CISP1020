@@ -32,9 +32,9 @@ int main()
     *************************************/
 
     // function call
-    float output = noArgsHasRet();
+    float totalAcres = noArgsHasRet();
 
-    cout << output << endl;
+    cout << totalAcres << endl;
 
     system("pause");
     return 0;
@@ -49,21 +49,24 @@ float noArgsHasRet()
     *      local variables
     *************************************/
 
-    float length, width, acre, totalSqft, totalAcres;
-    acre = 43560.471;
+    float lengthIn;
+    float widthIn;
+    float sqftPerAcre = 43560.471;
+    float totalSqft;
+    float totalAcres;
 
     cout << "Enter length of property in feet" << endl;
-    cin >> length;
+    cin >> lengthIn;
 
     cout << "Enter width of property in feet" << endl;
-    cin >> width;
+    cin >> widthIn;
 
-    totalSqft = length*width;
-    totalAcres = totalSqft/acre;
+    totalSqft = lengthIn*widthIn;
+    totalAcres = totalSqft/sqftPerAcre;
 
     cout << "A parcel of land with the dimensions of" << endl;
-    cout << "\tlength\t\t" << length << endl;
-    cout << "\twidth\t\t" << width << endl;
+    cout << "\tlength\t\t" << lengthIn << endl;
+    cout << "\twidth\t\t" << widthIn << endl;
     cout << "contains " << totalAcres << " acres." << endl;
 
     return totalAcres;

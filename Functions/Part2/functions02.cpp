@@ -3,7 +3,7 @@
 *  Author:         Greg Korte
 *  Date due:       15/08/31 6:00
 *  Description:    This function receives parameters
-*                  and returns no value
+*                  and returns no value.
 **********************************************************/
 
 /***************************
@@ -19,7 +19,7 @@ using namespace std;
 /*************************************
 *     function prototype
 *************************************/
-  void hasArgsNoRet(float length, float width);
+  void hasArgsNoRet(float lengthIn, float widthIn);
 
 /************************************
 *      global variables
@@ -30,16 +30,17 @@ int main()
     /************************************
     *      local variables
     *************************************/
-    double length, width;
+    float lengthIn;
+    float widthIn;
 
     cout << "Enter length of property in feet" << endl;
-    cin >> length;
+    cin >> lengthIn;
 
     cout << "Enter width of property in feet" << endl;
-    cin >> width;
+    cin >> widthIn;
 
     // function call
-    hasArgsNoRet(length, width);
+    hasArgsNoRet(lengthIn, widthIn);
 
     system("pause");
     return 0;
@@ -48,21 +49,22 @@ int main()
 /************************************
 *      non-member functions
 *************************************/
-void hasArgsNoRet(float length, float width)
+void hasArgsNoRet(float lengthIn, float widthIn)
 {
     /************************************
     *      local variables
     *************************************/
 
-    double acre, totalSqft, totalAcres;
-    acre = 43560.471;
+    float sqftPerAcre = 43560.471;
+    float totalSqft;
+    float totalAcres;
 
-    totalSqft = length*width;
-    totalAcres = totalSqft/acre;
+    totalSqft = lengthIn*widthIn;
+    totalAcres = totalSqft/sqftPerAcre;
 
     cout << "A parcel of land with the dimensions of" << endl;
-    cout << "\tlength\t\t" << length << endl;
-    cout << "\twidth\t\t" << width << endl;
+    cout << "\tlength\t\t" << lengthIn << endl;
+    cout << "\twidth\t\t" << widthIn << endl;
     cout << "contains " << totalAcres << " acres." << endl;
 
 }

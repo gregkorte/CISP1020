@@ -1,10 +1,9 @@
 /********************************************************
-*  Name:           Functions
+*  Name:           Functions 01
 *  Author:         Greg Korte
 *  Date due:       15/08/31 6:00
-*  Description:    Aggregate function building
-*                  you can delete the references to the 
-*                  function     void exampleOfFunction()
+*  Description:    This function receives no parameters
+*                  and returns no value.
 **********************************************************/
 
 /***************************
@@ -16,12 +15,11 @@ using namespace std;
 /************************************
 *     defines
 *************************************/
-#define  PI  3.14159
 
 /*************************************
 *     function prototype
 *************************************/
-void exampleOfFunction();
+	void noArgsNoRet();
 
 /************************************
 *      global variables
@@ -32,30 +30,41 @@ int main()
     /************************************
     *      local variables
     *************************************/
-     int inNum;
-     cout << "go Buffalo!!!!" << endl;
-     cout << "the value of PI is " << PI << "\n";
-     
-     cout << "\nenter a number 0~2: ";
-     cin >> inNum;
-     
-     cout << "you entered a " << inNum << "\n";
-     
-     // function call
-     exampleOfFunction();
-     
-     system("pause");
-     return 0;
+
+    // function call
+    noArgsNoRet();
+
+    system("pause");
+    return 0;
 }
 
 /************************************
 *      non-member functions
 *************************************/
-void exampleOfFunction()
+void noArgsNoRet()
 {
     /************************************
     *      local variables
     *************************************/
-    
-    // your code
+
+    float lengthIn;
+    float widthIn;
+    float sqftPerAcre = 43560.471;
+    float totalSqft;
+    float totalAcres;
+
+    cout << "Enter length of property in feet" << endl;
+    cin >> lengthIn;
+
+    cout << "Enter width of property in feet" << endl;
+    cin >> widthIn;
+
+    totalSqft = lengthIn*widthIn;
+    totalAcres = totalSqft/sqftPerAcre;
+
+    cout << "A parcel of land with the dimensions of" << endl;
+    cout << "\tlength\t\t" << lengthIn << endl;
+    cout << "\twidth\t\t" << widthIn << endl;
+    cout << "contains " << totalAcres << " acres." << endl;
+
 }

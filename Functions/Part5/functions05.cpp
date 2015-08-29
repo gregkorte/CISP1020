@@ -1,11 +1,10 @@
 /******************************************************************************
-*
-*      Program Name:   Functions Calling Functions
-*      Author:         Greg Korte
-*      Remarks:        Prompt user to enter radius and height.
-*                      Runs through 5 functions.
-*                      Then the functions return data to main and display.
-*
+*  Name:           Functions 05
+*  Author:         Greg Korte
+*  Date due:       15/08/31 6:00
+*  Description:    Prompt user to enter radius and height.
+*                  Runs through 5 functions.
+*                  Then the functions return data to main and display.
 ******************************************************************************/
 
 /******************************************
@@ -14,7 +13,7 @@
 #include <iostream>                // needed for I/O
 #include <iomanip>
 #include <cmath>
-#include <math.h>         // needed for pow method
+#include <math.h>                  // needed for pow method
 
 /******************************************
 *     Pre-processor
