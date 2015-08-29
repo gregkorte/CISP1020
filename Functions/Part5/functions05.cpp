@@ -95,7 +95,7 @@ int main()
 float areaCircle(float radiusIn)
 {
    float area;
-   area = PI * pow(radiusIn, 2);
+   area = PI * pow(radiusIn, 2);      //Utilized pow() method for extra credit
    return area;
 }
 
