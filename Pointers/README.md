@@ -8,10 +8,10 @@ Write a C program that will use 2 pointers:
 2.  Ask the user for 2 ints and store the values in inHeight and inRadius.
 3.  Declare the following 2 variables:
         a.  float        calcArea
-        b.  float        calcVolumn
+        b.  float        calcVolume
 4.  Declare the following 2 pointers:
         a.  float *      pArea
-        b.  float *      pVolumn
+        b.  float *      pVolume
 5.  Make the pointers point to the corresponding variables.
 6.  Write a function with the following header:
 
@@ -24,7 +24,7 @@ Write a C program that will use 2 pointers:
 
 1.  In the function, calculate the volume and surface area of the cylinder and put the corresponding answer into the proper pointer address.
 2.  Output should look like the following and be printed from main():
-
+```
      radius is ???????, height is ???????
 
            *** using the variables ***
@@ -34,3 +34,4 @@ Write a C program that will use 2 pointers:
            *** using the pointers ***
             area:           dddd.ddd
             volume:         dddd.ddd
+```
