@@ -1,0 +1,4 @@
+#Pointer Assignments
+
+
+##Our problem:
