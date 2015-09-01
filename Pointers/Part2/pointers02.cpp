@@ -33,8 +33,6 @@ int main()
 
     int inHeight;
     int inRadius;
-    float calcArea;
-    float calcVolume;
     float *pArea;
     float *pVolume;
 
@@ -63,22 +61,12 @@ void arithmetic(int, int, float*, float*)
     *      local variables
     *************************************/
 
-    float sqftPerAcre = 43560.471;
-    float totalSqft;
-    float totalAcres;
-
-    cout << "Enter length of property in feet" << endl;
-    cin >> lengthIn;
-
-    cout << "Enter width of property in feet" << endl;
-    cin >> widthIn;
-
     totalSqft = lengthIn*widthIn;
     totalAcres = totalSqft/sqftPerAcre;
 
-    cout << "A parcel of land with the dimensions of" << endl;
-    cout << "\tlength\t\t" << lengthIn << endl;
-    cout << "\twidth\t\t" << widthIn << endl;
-    cout << "contains " << totalAcres << " acres." << endl;
+    cout << "Radius is " << inRadius << ", Height is " << inHeight << endl;
+    cout << "\t\t***Using the pointers***" << endl;
+    cout << "\t\t\tArea:\t\t" << *pArea << endl;
+    cout << "\t\t\tVolume:\t\t" << *pVolume << endl;
 
 }
