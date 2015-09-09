@@ -2,19 +2,23 @@
 *  Name:           Pointers 01
 *  Author:         Greg Korte
 *  Date due:       15/09/14 6:00
-*  Description:    This function receives no parameters
-*                  and returns no value.
+*  Description:    This function passes two pointers into
+                   a function to change multiple variables
+                   in main.
 **********************************************************/
 
 /***************************
 *     libraries
 ****************************/
 #include <iostream>            // needed for Cin and Cout
-using namespace std;
+#include <cmath>
+#include <math.h>                  // needed for pow method
 
 /************************************
 *     defines
 *************************************/
+#define PI 3.14159
+using namespace std;
 
 /*************************************
 *     function prototype
@@ -35,12 +39,13 @@ int main()
     int inRadius;
     float calcArea;
     float calcVolume;
-    float *pArea;
-    float *pVolume;
+    float* pArea;
+    float* pVolume;
 
-    *pArea = calcArea;
-    *pVolume = calcVolume;
+    pArea = &calcArea;
+    pVolume = &calcVolume;
 
+    // get and store input
     cout << "Enter a height." << endl;
     cin >> inHeight;
 
@@ -48,7 +53,15 @@ int main()
     cin >> inRadius;
 
     // function call
-    arithemtic(inHeight, inRadius, *pArea, *pVolume);
+    arithmetic(inHeight, inRadius, pArea, pVolume);
+
+    cout << "\n\tRadius is " << inRadius << ", " << "height is " << inHeight << endl;
+    cout << "\n\t\t*** Using the variables ***" << endl;
+    cout << "\t\tArea:\t\t\t" << calcArea << endl;
+    cout << "\t\tVolume:\t\t\t" << calcVolume << endl;
+    cout << "\n\t\t*** Using the pointers ***" << endl;
+    cout << "\t\tArea:\t\t\t" << *pArea << endl;
+    cout << "\t\tVolume:\t\t\t" << *pVolume << "\n" << endl;
 
     system("pause");
     return 0;
@@ -57,28 +70,13 @@ int main()
 /************************************
 *      non-member functions
 *************************************/
-void arithmetic(int, int, float*, float*)
+void arithmetic(int radiusIn, int heightIn, float* pArea, float* pVolume)
 {
     /************************************
     *      local variables
     *************************************/
 
-    float sqftPerAcre = 43560.471;
-    float totalSqft;
-    float totalAcres;
-
-    cout << "Enter length of property in feet" << endl;
-    cin >> lengthIn;
-
-    cout << "Enter width of property in feet" << endl;
-    cin >> widthIn;
-
-    totalSqft = lengthIn*widthIn;
-    totalAcres = totalSqft/sqftPerAcre;
-
-    cout << "A parcel of land with the dimensions of" << endl;
-    cout << "\tlength\t\t" << lengthIn << endl;
-    cout << "\twidth\t\t" << widthIn << endl;
-    cout << "contains " << totalAcres << " acres." << endl;
+    *pArea = PI * pow(radiusIn, 2) * heightIn;
+    *pVolume = (2 * (PI * pow(radiusIn, 2))) + (heightIn * (PI * radiusIn * 2));
 
 }
