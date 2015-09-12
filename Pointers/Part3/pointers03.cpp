@@ -2,7 +2,7 @@
 *  Name:       Pointers 03
 *  Author:     Greg Korte
 *  Date due:   15/09/14 6:00
-*  Remarks:    1) Print each element in an array initialized by row.
+*  Remarks:    1) Print each element in an array initialized by strcpy.
                2) Print each element in an array initialized in one line.
                3) 
 *
@@ -46,7 +46,7 @@ int main()
     *   local variables            *
     *******************************/
     demo01();
-    // demo02();
+    demo02();
     // demo03();
     // demo04();
     // demo05();
@@ -91,9 +91,25 @@ void demo02()
 {
     cout << "\n\n  **** in Demo02 ****\n";
     // declare and initialize
-    char monthName[12][15]= {"?????"};
+    char monthName[12][15] =
+        {
+            {"January"},
+            {"February"},
+            {"March"},
+            {"April"},
+            {"May"},
+            {"June"},
+            {"July"},
+            {"August"},
+            {"September"},
+            {"October"},
+            {"November"},
+            {"December"},
+        };
 
     // print
+    for (int i = 0; i < 12; i++)
+        cout << monthName[i] << endl;
 }
 
 /*****************************************
