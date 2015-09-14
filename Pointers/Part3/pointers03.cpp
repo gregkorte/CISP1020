@@ -47,7 +47,7 @@ int main()
     *******************************/
     demo01();
     demo02();
-    // demo03();
+    demo03();
     // demo04();
     // demo05();
     // demo06();
@@ -92,6 +92,71 @@ void demo02()
     cout << "\n\n  **** in Demo02 ****\n";
     // declare and initialize
     char monthName[12][15] =
+        {"January", "February", "March", "April", "May", "June", "July",
+        "August","September", "October", "November", "December"};
+
+    // print
+    for (int i = 0; i < 12; i++)
+        cout << monthName[i] << endl;
+}
+
+/*****************************************
+Section 3
+*****************************************/
+void demo03()
+{
+    cout << "\n\n  **** in Demo03 ****\n";
+    // declare and initialize
+    char monthName[][15] =
+        {"January", "February", "March", "April", "May", "June", "July",
+        "August","September", "October", "November", "December"};
+
+    // print
+    for (int i = 0; i < 12; i++)
+        cout << monthName[i] << endl;
+}
+
+/*****************************************
+Section 4
+*****************************************/
+void demo04()
+{
+    cout << "\n\n  **** in Demo04 ****\n";
+    // declare
+    char* monthName[12];
+
+    // allocate memory
+    for (int i = 0; i < 12; i++)
+        monthName[i] = new char[15];
+
+    // load month values
+    strcpy(monthName[0], "January");
+    strcpy(monthName[1], "February");
+    strcpy(monthName[2], "March");
+    strcpy(monthName[3], "April");
+    strcpy(monthName[4], "May");
+    strcpy(monthName[5], "June");
+    strcpy(monthName[6], "July");
+    strcpy(monthName[7], "August");
+    strcpy(monthName[8], "September");
+    strcpy(monthName[9], "October");
+    strcpy(monthName[10], "November");
+    strcpy(monthName[11], "December");
+
+    // print
+    for (int i = 0; i < 12; i++)
+        cout << monthName[i] << endl;
+}
+
+/*****************************************
+Section 5
+*****************************************/
+void demo05()
+{
+    cout << "\n\n  **** in Demo05 ****\n";
+    // declare. instantiate and load the array
+    // code for demo01() or demo02()
+    char monthName[][15] =
         {
             {"January"},
             {"February"},
@@ -107,54 +172,15 @@ void demo02()
             {"December"},
         };
 
-    // print
-    for (int i = 0; i < 12; i++)
-        cout << monthName[i] << endl;
-}
-
-/*****************************************
-Section 3
-*****************************************/
-void demo03()
-{
-    cout << "\n\n  **** in Demo03 ****\n";
-    // declare and initialize
-    char monthName[][15]= {"?????"};
-
-    // print
-}
-
-/*****************************************
-Section 4
-*****************************************/
-void demo04()
-{
-    cout << "\n\n  **** in Demo04 ****\n";
-    // declare
-    char* monthName[12];
-
-    // allocate memory
-
-    // load month values
-
-    // print
-}
-
-/*****************************************
-Section 5
-*****************************************/
-void demo05()
-{
-    cout << "\n\n  **** in Demo05 ****\n";
-    // declare. instanciate and load the array
-    // code for demo01() or demo02()
-
     // create a char pointer
     char* pMonthName;
 
     // make pointer point to the array
 
+//  pMonthName = monthName;
     // print array using the pointer
+
+    cout << *pMonthName;
 }
 
 /*****************************************
