@@ -40,6 +40,14 @@ int main()
     float* pArea;
     float* pVolume;
 
+    // initialize placeholder variables
+    float area = 0;
+    float volume = 0;
+
+    // dereference for values
+    pArea = &area;
+    pVolume = &volume;
+
     // get and store input
     cout << "Enter a height." << endl;
     cin >> inHeight;
@@ -72,13 +80,7 @@ void arithmetic(int radiusIn, int heightIn, float* pArea, float* pVolume)
     float area = PI * pow(radiusIn, 2) * heightIn;
     float volume = (2 * (PI * pow(radiusIn, 2))) + (heightIn * (PI * radiusIn * 2));
 
-    pArea = &area;
-    pVolume = &volume;
-
-    *pArea = *pArea;
-    *pVolume = *pVolume;
-
-    cout << "var: " << *pArea << "\n";
-    cout << "var: " << *pVolume << "\n";
+    *pArea = area;
+    *pVolume = volume;
 
 }
