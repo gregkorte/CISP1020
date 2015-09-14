@@ -9,7 +9,7 @@ Write a C program that will use 2 pointers.
 3.  Declare the following 2 pointers:
         a.  float *      pArea
         b.  float *      pVolume
-4.  write a function with the following header:
+4.  Write a function with the following header:
 ```
         void arithmetic(int, int, float*, float*)
 ```
