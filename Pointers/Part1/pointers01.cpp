@@ -12,7 +12,7 @@
 ****************************/
 #include <iostream>            // needed for Cin and Cout
 #include <cmath>
-#include <math.h>                  // needed for pow method
+#include <math.h>              // needed for pow method
 
 /************************************
 *     defines
@@ -42,6 +42,7 @@ int main()
     float* pArea;
     float* pVolume;
 
+    // dereference pointers
     pArea = &calcArea;
     pVolume = &calcVolume;
 
@@ -55,7 +56,8 @@ int main()
     // function call
     arithmetic(inHeight, inRadius, pArea, pVolume);
 
-    cout << "\n\tRadius is " << inRadius << ", " << "height is " << inHeight << endl;
+    // output to screen
+    cout << "\n\tRadius is " << inRadius << ", height is " << inHeight << endl;
     cout << "\n\t\t*** Using the variables ***" << endl;
     cout << "\t\tArea:\t\t\t" << calcArea << endl;
     cout << "\t\tVolume:\t\t\t" << calcVolume << endl;
