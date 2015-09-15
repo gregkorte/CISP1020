@@ -4,7 +4,9 @@
 *  Date due:   15/09/14 6:00
 *  Remarks:    1) Print each element in an array initialized by strcpy.
                2) Print each element in an array initialized in one line.
-               3) 
+               3) Print each element in an array initialized with variable
+                  rows.
+               4) Print each element in a pointer array.
 *
 *************************************************************************/
 
@@ -48,8 +50,8 @@ int main()
     demo01();
     demo02();
     demo03();
-    // demo04();
-    // demo05();
+    demo04();
+    demo05();
     // demo06();
 
     system("pause");
@@ -130,18 +132,18 @@ void demo04()
         monthName[i] = new char[15];
 
     // load month values
-    strcpy(monthName[0], "January");
-    strcpy(monthName[1], "February");
-    strcpy(monthName[2], "March");
-    strcpy(monthName[3], "April");
-    strcpy(monthName[4], "May");
-    strcpy(monthName[5], "June");
-    strcpy(monthName[6], "July");
-    strcpy(monthName[7], "August");
-    strcpy(monthName[8], "September");
-    strcpy(monthName[9], "October");
-    strcpy(monthName[10], "November");
-    strcpy(monthName[11], "December");
+    monthName[0] = "January";
+    monthName[1] = "February";
+    monthName[2] = "March";
+    monthName[3] = "April";
+    monthName[4] = "May";
+    monthName[5] = "June";
+    monthName[6] = "July";
+    monthName[7] = "August";
+    monthName[8] = "September";
+    monthName[9] = "October";
+    monthName[10] = "November";
+    monthName[11] = "December";
 
     // print
     for (int i = 0; i < 12; i++)
@@ -176,11 +178,14 @@ void demo05()
     char* pMonthName;
 
     // make pointer point to the array
+    pMonthName = monthName[0];
 
-//  pMonthName = monthName;
     // print array using the pointer
+    for (int i = 0; i < 12; i++){
+        cout << pMonthName << endl;
+        pMonthName = pMonthName + 15;
+    }
 
-    cout << *pMonthName;
 }
 
 /*****************************************
