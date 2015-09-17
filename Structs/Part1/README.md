@@ -16,7 +16,7 @@
 
 ######In main():
 
-1.  Declare a StarTrekPersonel struct named stpSample.
+1.  Declare a StarTrekPersonel struct named strSample.
 2.  Create (instantiate) the variable.
 3.  Using cin and cout to load in the values to the ID, name, etc.
 4.  Using cout output your stpSample in the following way.
