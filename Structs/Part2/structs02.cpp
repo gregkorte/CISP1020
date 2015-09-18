@@ -44,46 +44,45 @@ int main()
     *************************************/
 
     StarTrekPersonel strSample;
-    StarTrekPersonel* obj, o;
-    obj = &o;
-    obj->ID;
-    obj->name;
-    obj->address;
-    obj->city;
-    obj->state;
-    obj->zip;
-    obj->planet;
-
+    StarTrekPersonel* ptr, obj;
+    ptr = &obj;
+    ptr->ID;
+    ptr->name;
+    ptr->address;
+    ptr->city;
+    ptr->state;
+    ptr->zip;
+    ptr->planet;
 
     cout << "Enter your Federation ID: ";
-    getline(cin, obj->ID);
+    getline(cin, ptr->ID);
 
     cout << "Enter your name:\t  ";
-    getline(cin, obj->name);
+    getline(cin, ptr->name);
 
     cout << "Enter your address:\t  ";
-    getline(cin, obj->address);
+    getline(cin, ptr->address);
 
     cout << "Enter your city:\t  ";
-    getline(cin, obj->city);
+    getline(cin, ptr->city);
 
     cout << "Enter your state:\t  ";
-    getline(cin, obj->state);
+    getline(cin, ptr->state);
 
     cout << "Enter your zip:\t\t  ";
-    getline(cin, obj->zip);
+    getline(cin, ptr->zip);
 
     cout << "Enter your planet:\t  ";
-    getline(cin, obj->planet);
+    getline(cin, ptr->planet);
 
     cout << "\n\n\t**** The strSample field ****" << endl;
-    cout << "\t   ID:\t\t" << obj->ID << endl;
-    cout << "\t   Name:\t" << obj->name << endl;
-    cout << "\t   Address:\t" << obj->address << endl;
-    cout << "\t   City:\t" << obj->city << endl;
-    cout << "\t   State:\t" << obj->state << endl;
-    cout << "\t   Zip:\t\t" << obj->zip << endl;
-    cout << "\t   Planet:\t" << obj->planet << endl;
+    cout << "\t   ID:\t\t" << ptr->ID << endl;
+    cout << "\t   Name:\t" << ptr->name << endl;
+    cout << "\t   Address:\t" << ptr->address << endl;
+    cout << "\t   City:\t" << ptr->city << endl;
+    cout << "\t   State:\t" << ptr->state << endl;
+    cout << "\t   Zip:\t\t" << ptr->zip << endl;
+    cout << "\t   Planet:\t" << ptr->planet << endl;
     cout << "\n" << endl;
 
     system("pause");
