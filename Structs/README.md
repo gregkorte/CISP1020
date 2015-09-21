@@ -3,7 +3,8 @@
 ###Part 1
 Create a struct with data items.
 
-In main:
+In main():
+
 1. Get data by cin cout.
 2. Output data items.
 
