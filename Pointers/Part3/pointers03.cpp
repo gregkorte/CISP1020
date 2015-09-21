@@ -7,6 +7,10 @@
                3) Print each element in an array initialized with variable
                   rows.
                4) Print each element in a pointer array.
+               5) Print each element in a pointer array initialized with
+                  variable rows.
+               6) Print each element in a pointer array initialized as a
+                  single char array.
 *
 *************************************************************************/
 
@@ -52,7 +56,7 @@ int main()
     demo03();
     demo04();
     demo05();
-    // demo06();
+    demo06();
 
     system("pause");
     return 0;
@@ -201,6 +205,22 @@ void demo06()
     pMonthName = new char[180];
 
     // load month names
+    strcpy(pMonthName, "January");
+    strcpy(pMonthName, "February");
+    strcpy(pMonthName, "March");
+    strcpy(pMonthName, "April");
+    strcpy(pMonthName, "May");
+    strcpy(pMonthName, "June");
+    strcpy(pMonthName, "July");
+    strcpy(pMonthName, "August");
+    strcpy(pMonthName, "September");
+    strcpy(pMonthName, "October");
+    strcpy(pMonthName, "November");
+    strcpy(pMonthName, "December");
 
     // print array using the pointer
+    for (int i = 0; i < 12; i++){
+        cout << pMonthName[i] << endl;
+//      pMonthName = pMonthName;
+    }
 }
