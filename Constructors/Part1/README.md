@@ -1,4 +1,4 @@
-#Constructor Assignment 01
+#Constructors Assignment 01
 ###Card 02
 1.  Start with your Card class in the Card.cpp file (from Card01 assignment).
 2.  Add the following constructors to the Card class:
