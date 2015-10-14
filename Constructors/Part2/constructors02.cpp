@@ -1,17 +1,17 @@
 /*************************************************************
-*  Name:           constructors02
+*  Name:           constructors02(Date02)
 *  Author:         Greg Korte
 *  Date due:       15-10-05
 *  Description:    Create a date class with getters and setters.
-                   Create function to check leap year. Test output
+                   Create two constructors, one default. Create
+                   function to check leap year. Test output
                    by printing a test for each member function.
 **************************************************************/
 
 /***************************
 *     libraries
 ****************************/
-#include <iostream>            // needed for Cin and Cout
-#include <cstdlib>             // needed for 
+#include <iostream>                          // needed for Cin and Cout
 using namespace std;
 
 /************************************
@@ -29,31 +29,20 @@ class Date                                   // capital letter
       int year;                              // year
 
    public:
-      /*******************************************************
-      *   the word 'set'
-      *   data item name starting with an upper case letter
-      ********************************************************/
-
       // constructors
 
       Date();
       Date(int, int, int);
 
       // setters
-      void setMonth(int);
-      void setDay(int);
-      void setYear(int);
-
-      /*******************************************************
-      *   the word 'get'
-      *   data item name starting with an upper case letter
-      *   example  string getRow()
-      ********************************************************/
+      void setMonth(int mm)        {month = mm;}
+      void setDay(int dd)          {day = dd;}
+      void setYear(int yy)         {year = yy;}
 
       // getters
-      int getMonth();
-      int getDay();
-      int getYear();
+      int getMonth()               {return month;}
+      int getDay()                 {return day;}
+      int getYear()                {return year;}
 
       bool calcLeapYear(int);
       void display();
@@ -75,14 +64,6 @@ Date::Date(int mm, int dd, int yy)
   setDay(dd);
   setYear(yy);
 }
-
-void Date::setMonth(int mm)        {month = mm;}
-void Date::setDay(int dd)          {day = dd;}
-void Date::setYear(int yy)         {year = yy;}
-
-int Date::getMonth()               {return month;}
-int Date::getDay()                 {return day;}
-int Date::getYear()                {return year;}
 
 bool Date::calcLeapYear(int year)
 {
@@ -132,18 +113,18 @@ void Date::display()
 
 int main()
 {
-     /************************************
-     *      local variables
-     *************************************/
-     testClass();
-     testDisplay();
-     testSetters();
-     testGetters();
-     testLeapYear();
-     testDate02();
-
-     system("pause");
-     return 0;
+  /************************************
+  *      local variables
+  *************************************/
+  testClass();
+  testDisplay();
+  testSetters();
+  testGetters();
+  testLeapYear();
+  testDate02();
+  
+  system("pause");
+  return 0;
 }
 
 /************************************
@@ -161,56 +142,56 @@ void testClass()
     date.display();
 }
 
-// TEST display output
-void testDisplay()
-{
-    cout << "\n***** TestDate02 *****\n";
-    Date date;
-    date.display();
-}
+ // TEST display output
+ void testDisplay()
+ {
+     cout << "\n***** TestDate02 *****\n";
+     Date date(2, 4, 1976);
+     date.display();
+ }
 
-// TEST setters
-void testSetters()
-{
-    cout << "\n***** TestDate03 *****\n";
-    Date date;
-    date.setMonth(1);
-    date.setDay(1);
-    date.setYear(1900);
-    date.display();
-}
+ // TEST setters
+ void testSetters()
+ {
+     cout << "\n***** TestDate03 *****\n";
+     Date date;
+     date.setMonth(12);
+     date.setDay(31);
+     date.setYear(1972);
+     date.display();
+ }
 
-// TEST getters
-void testGetters()
-{
-    cout << "\n***** TestDate04 *****\n";
-    Date date;
-    cout << date.getMonth();
-    cout << date.getDay();
-    cout << date.getYear();
-}
+ // TEST getters
+ void testGetters()
+ {
+     cout << "\n***** TestDate04 *****\n";
+     Date date;
+     cout << date.getMonth() << "\n";
+     cout << date.getDay() << "\n";
+     cout << date.getYear() << "\n";
+ }
 
-// TEST calcLeapYear
-void testLeapYear()
-{
-  cout << "\n***** TestDate05 *****\n";
-  Date date;
-  date.setYear(1900);
-  date.display();
-  date.setYear(2000);
-  date.display();
-  date.setYear(1999);
-  date.display();
-  date.setYear(1996);
-  date.display();
-}
+ // TEST calcLeapYear
+ void testLeapYear()
+ {
+   cout << "\n***** TestDate05 *****\n";
+   Date date;
+   date.setYear(1900);
+   date.display();
+   date.setYear(2000);
+   date.display();
+   date.setYear(1999);
+   date.display();
+   date.setYear(1996);
+   date.display();
+ }
 
-// TEST constructors
-void testDate02()
-{
-  cout << "\n***** TestDate06 *****\n";
-  Date date01;
-  Date date02(1,1,1900);
-  date01.display();
-  date02.display();
-}
+ // TEST constructors
+ void testDate02()
+ {
+   cout << "\n***** TestDate06 *****\n";
+   Date date01;
+   date01.display();
+   Date date02(4,12,1942);
+   date02.display();
+ }
