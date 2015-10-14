@@ -3,9 +3,9 @@
 1.  Start with your Card class in the Card.cpp file (from Card01 assignment).
 2.  Add the following constructors to the Card class:
  - a.  Create a constructor that takes a character and an int.
-   * i.   Assign the int to the value data item.
-   * ii.  Assign the char to the suit data item.
-   * iii. Use the ‘setter’ to assign the values.
+    1.   Assign the int to the value data item.
+    2.  Assign the char to the suit data item.
+    3. Use the ‘setter’ to assign the values.
  - b.  Create a 'default' constructor - no arguments.
    * i.  Use the ‘setters’ to assign values.
 3.  0 to the value data item.
