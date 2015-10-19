@@ -1,0 +1,43 @@
+Constructors07 (Date05)
+
+1. Test constructor and display:
+     a. Create object
+     b. Run display
+
+2. Test display:
+     a. Create object
+     b. Run display
+
+3. Test setters:
+     a. Create object
+     a. Run the setters
+     b. Run display
+
+4. Test getters:
+     a. Create object
+     b. Run getters
+
+5. Test calcLeapYear:
+     a. Create object
+     b. Set year with setter for following years
+     c. Display output:
+          i.  1900 – not a leap year
+          ii. 2000 – is a leap year
+          iii.1999 – is not a leap year
+          iv. 1996 – is a leap year
+
+6. Test constructors
+    a. Create object (no params)
+    b. Run display (1/1/1900)
+    c. Create object (with params)
+    d. Run display (4/12/1942)
+
+7. Test calcDayOfYear
+    a. Create object (params 10, 19, 2015)
+    b. Print julian day (1789634)
+
+8. Test copy constructor
+    a. Create object (params 12, 31, 1972)
+    b. Create second object copying first
+    c. Run display on first object (output 12/31/1972)
+    d. Run display on second object (output 12/31/1972)
